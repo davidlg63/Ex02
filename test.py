@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import hw2
-# import hw2comp
+import hw2comp
 import random
 import subprocess
 import os
@@ -9,7 +9,7 @@ import select
 from io import StringIO
 from termcolor import colored
 from time import sleep
-# from generate_test_file import generate_test_file
+from generate_test_file import generate_test_file
 
 
 def get_scrambled(file_name):
@@ -72,8 +72,7 @@ def check_test_results(input_file):
 
 
 def print_status(has_failed):
-    print(f'{test_name}: '
-          f'{colored("passed", "green") if not has_curr_failed else colored("failed", "red")}')
+    print(f'{test_name}: 'f'{colored("passed", "green") if not has_curr_failed else colored("failed", "red")}')
 
 
 def run_part_a(test_file):
